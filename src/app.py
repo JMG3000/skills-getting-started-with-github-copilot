@@ -91,6 +91,16 @@ def root():
     return RedirectResponse(url="/static/index.html")
 
 
+@app.get("/cheese")
+def cheese_form():
+    return RedirectResponse(url="/static/cheese.html")
+
+
+@app.get("/cheese-404")
+def cheese_not_found():
+    return RedirectResponse(url="/static/cheese-404.html")
+
+
 @app.get("/activities")
 def get_activities():
     return activities
